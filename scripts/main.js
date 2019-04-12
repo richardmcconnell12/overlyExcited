@@ -15,27 +15,13 @@ function addExcitement(theWordArray) {
     let buildMeUp = ""
 
     for (let i = 0; i < theWordArray.length; i++) {
-    if (i % 12 === 3) {
-        buildMeUp += sentence[i] + "! "
-        console.log(buildMeUp + " " );
-    }
-
-    else if  (i % 12 === 6) {
-        buildMeUp += sentence[i] + "! "
-        console.log(buildMeUp + " " );
-    }
-
-
-    else if  (i % 12 === 9) {
-        buildMeUp += sentence[i] + "! "
-        console.log(buildMeUp + " " );
-    }
-
-    else {
-        buildMeUp += sentence[i]  +  " "
-        console.log(buildMeUp);
-    }
-
+        if ((i + 1) % 3 === 0) {
+            buildMeUp += theWordArray[i] + "! "
+            console.log(buildMeUp)
+        } else {
+            buildMeUp += theWordArray[i] + " "
+            console.log(buildMeUp)
+        }
     }
 }
 
